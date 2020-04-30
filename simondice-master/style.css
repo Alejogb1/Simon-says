@@ -20,16 +20,17 @@
     width: 200px;
     height: 100px;
 }
-#item1 {
+#item1, .unselected1 {
     background-color: red;
+    z-index: 1000;
 }
-#item2 {
+#item2, .unselected2 {
     background-color: blue;
 }
-#item3 {
+#item3, .unselected3 {
     background-color: yellow;
 }
-#item4 {
+#item4, .unselected4 {
     background-color: black;
 }
 .selected {
