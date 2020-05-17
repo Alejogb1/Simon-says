@@ -19,6 +19,9 @@
     margin: 0 auto;
     width: 200px;
     height: 100px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 500ms;
 }
 #item1, .unselected1 {
     background-color: red;
@@ -32,10 +35,4 @@
 }
 #item4, .unselected4 {
     background-color: black;
-}
-.selected {
-    background-color: blue !important; 
-}
-.unselected {
-    background-color: black !important;
 }
