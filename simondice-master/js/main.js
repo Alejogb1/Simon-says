@@ -48,7 +48,7 @@ function manejarTurnoPC(){
     secuencia_pc.forEach(function(bloque, index){
         RETRASO_MS = 1000   
         setTimeout(() => {
-            selectBlock(bloque)
+        selectBlock(bloque)
         }, RETRASO_MS);
     })
    setTimeout(
