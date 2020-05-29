@@ -1,7 +1,6 @@
 
 
 const $botonplay = document.querySelector("#b-play");
-const $containerBloques = document.querySelectorAll(".items")
 let secuencia_pc = [];
 let secuencia_usuario = [];
 let ronda = 0;
@@ -53,13 +52,15 @@ function actualizarRonda (){
     const RONDA_ELEMENT = document.querySelector("#ronda");
     RONDA_ELEMENT.textContent =  ronda;
 }
-function numeroRandom () {
-   return parseInt((4)*(Math.random()))
+function cuadroRandom () {
+    const $containerBloques = document.querySelectorAll(".items")
+    const indice = parseInt((4)*(Math.random()))
+    return $containerBloques[indice]
 }
 function manejarTurnoPC(){
     bloquearInputUsuario();
     actualizarTexto("Turno de la pc")
-    const $numeroAleatorio = numeroRandom();
+    const $numeroAleatorio = cuadroRandom();
     secuencia_pc.push($numeroAleatorio);
     const RETRASO_JUGADOR = 1000;
     $containerBloques.forEach(function(bloque, index){
