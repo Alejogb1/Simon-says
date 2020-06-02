@@ -9,12 +9,7 @@
     max-width: 500px;
     text-align: center;
 }
-.allitems {
-    display: grid;
-    gap: 10px;
-    width: 50%;
-    margin: 0 auto;
-}
+
 .items{
     margin: 0 auto;
     width: 200px;

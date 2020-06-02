@@ -4,25 +4,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>simondice</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
 </head>
 <body>
     <div>
-        <div class="navbar">
-            <h1> Simondice!</h1>
-            <h3 style="font-family: sans-serif;" id="text-play"> Pulsa el boton play para empezar a jugar.</h3>
-            <button style="margin-bottom: 20px;" id="b-play">play</button>
-        </div>
         <div class="container">
-            <div class="allitems">   
-                <div id="item1" class="items"> </div>
-                <div id="item2" class="items"></div>
-                <div id="item3" class="items"></div>
-                <div id="item4" class="items"></div>
+            <h1> Simondice!</h1>
+            <div class="row">
+                <div class="alert alert-primary col-8 center-block" role="alert" id="text-play">
+                    Pulsa play para empezar a jugar.
+                </div>
+                <button style="margin: 0 0 20px auto; " id="b-play" class="col-2 btn btn-primary">play</button>
+    
             </div>
+        </div>
+        <div class="container-sm">
+            <div class="allitems row">   
+                <div id="item1" class="items col"></div>
+                <div id="item2" class="items col"></div>
+            </div>
+            <div class="row">
+                <div id="item3" class="items col"></div>
+                <div id="item4" class="items col"></div>  
+            </div>
+            
         </div>
     </div>
     <div>
-        <div>
+        <div class="container">
             <h3>Estas en la ronda <span id="ronda"> 0 </span></h3>
         </div>
     </div>

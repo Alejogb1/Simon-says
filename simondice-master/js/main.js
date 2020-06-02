@@ -22,6 +22,15 @@ function desbloquearInputUsuario (){
         item.onclick = manejarInputUsuario;
     })
 }
+function perder (){
+    alert("Perdiste Looser");
+    secuencia_pc = [];
+    secuencia_usuario =[];
+    ronda = 0;
+    actualizarTexto("Volvé a intentarlo.");
+    actualizarRonda(ronda);
+}
+    
 function manejarInputUsuario (e){
     const $seleccionado = e.target;
     console.log($seleccionado);
@@ -42,6 +51,9 @@ function manejarInputUsuario (e){
 }
 function selectBlock (bloque){
         bloque.style.opacity = 1;  
+        setTimeout(function() {
+            bloque.style.opacity = 0.5;
+        },500)
 }  
 
 function actualizarTexto (texto) {
@@ -62,9 +74,9 @@ function manejarTurnoPC(){
     actualizarTexto("Turno de la pc")
     const $numeroAleatorio = cuadroRandom();
     secuencia_pc.push($numeroAleatorio);
-    const RETRASO_JUGADOR = 1000;
-    $containerBloques.forEach(function(bloque, index){
-        RETRASO_MS = 1000   
+    const RETRASO_JUGADOR = (secuencia_pc.length +1)* 1000;
+    secuencia_pc.forEach(function(bloque, index){
+        RETRASO_MS = (index + 1) * 1000;   
         setTimeout(() => {
         selectBlock(bloque)
         }, RETRASO_MS);
