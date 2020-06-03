@@ -71,7 +71,7 @@ function cuadroRandom () {
 }
 function manejarTurnoPC(){
     bloquearInputUsuario();
-    actualizarTexto("Turno de la pc")
+    actualizarTexto("PC's turn. ")
     const $numeroAleatorio = cuadroRandom();
     secuencia_pc.push($numeroAleatorio);
     const RETRASO_JUGADOR = (secuencia_pc.length +1)* 1000;
@@ -83,7 +83,7 @@ function manejarTurnoPC(){
     })
    setTimeout(
        function(){
-        actualizarTexto("Es el turno del jugador")
+        actualizarTexto("Your turn.")
         desbloquearInputUsuario();
        }, RETRASO_JUGADOR
    )
